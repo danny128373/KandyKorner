@@ -47,6 +47,12 @@
       "name": "Chocolate Tux",
       "price": "3.89",
       "productTypeId": 1
+    },
+    {
+      "name": "Hershey's",
+      "price": 2,
+      "productTypeId": 1,
+      "id": 9
     }
   ],
   "productTypes": [
