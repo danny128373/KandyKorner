@@ -1,9 +1,25 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-export default function ProductCard() {
+export default function ProductCard(props) {
+
   return (
-    <div>
-
-    </div>
+    <>
+      <div className="card">
+        <div className="card-content">
+          <h3>Candy Name: <span>
+            {props.product.name}
+          </span></h3>
+          <p>Price: ${props.product.price}</p>
+          <Link to={`/products/${props.product.id}`}>
+            <button>Details</button>
+          </Link>
+          <button type="button">
+            Edit
+          </button>
+          <button type="button" onClick={() => props.deleteProduct(props.product.id)}>Remove</button>
+        </div>
+      </div>
+    </>
   )
 }
