@@ -1,13 +1,21 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
 import ProductList from './products/ProductList'
+import ProductForm from './products/ProductForm'
 
 export default function ApplicationViews() {
   return (
-    <div>
-      <Route path="/products" render={(props) => {
+    <>
+      <Route exact path="/products" render={(props) => {
         return <ProductList {...props} />
       }} />
-    </div>
+      <Route
+        path="/products/new"
+        render={(props) => {
+          return <ProductForm
+            {...props}
+          />
+        }} />
+    </>
   )
 }
