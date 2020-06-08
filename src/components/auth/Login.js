@@ -20,6 +20,7 @@ export default function Login(props) {
       <form onSubmit={(event) => {
         event.preventDefault()
         props.setUser(credentials)
+        props.history.push('/')
       }}>
         <fieldset>
           <label htmlFor="email">Email:</label>

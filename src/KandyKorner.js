@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Login from './components/auth/Login'
 import ApplicationViews from './components/ApplicationViews'
+import NavBar from './components/nav/NavBar'
 
 function KandyKorner(props) {
 
@@ -17,13 +18,21 @@ function KandyKorner(props) {
     setHasUser(isAuthenticated())
   }
 
+  const clearUser = () => {
+    sessionStorage.clear();
+    setHasUser(isAuthenticated());
+  }
+
   return (
     <>
       {!hasUser
-        ? <Login setUser={setUser} />
+        ? <Login setUser={setUser} {...props} />
         : null}
-      {/* <NavBar hasUser={hasUser} /> */}
-      <ApplicationViews />
+      {hasUser
+        ? <NavBar {...props} hasUser={hasUser} {...props} clearUser={clearUser} />
+        : null}
+      {hasUser ? <ApplicationViews />
+        : null}
     </>
   )
 }
