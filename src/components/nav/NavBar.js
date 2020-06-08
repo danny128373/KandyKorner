@@ -6,8 +6,6 @@ import './NavBar.css'
 
 const NavBar = (props) => {
 
-  console.log(props)
-
   const handleLogout = () => {
     props.clearUser();
     props.history.push('/');

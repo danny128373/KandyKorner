@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { withRouter } from 'react-router-dom'
 import Login from './components/auth/Login'
 import ApplicationViews from './components/ApplicationViews'
 import NavBar from './components/nav/NavBar'
@@ -37,4 +38,4 @@ function KandyKorner(props) {
   )
 }
 
-export default KandyKorner
+export default withRouter(KandyKorner)
