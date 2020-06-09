@@ -10,8 +10,8 @@ export default function ProductForm(props) {
   const handleFieldChange = event => {
     const stateToChange = { ...product }
     stateToChange[event.target.id] = event.target.value
-    if (parseInt(stateToChange[event.target.id]) < parseInt(stateToChange[event.target.id]) + 1) {
-      stateToChange[event.target.id] = parseInt(stateToChange[event.target.id]);
+    if (parseFloat(stateToChange[event.target.id]) < parseFloat(stateToChange[event.target.id]) + 1) {
+      stateToChange[event.target.id] = parseFloat(stateToChange[event.target.id]);
     } else {
       stateToChange[event.target.id] = event.target.value;
     }
@@ -35,7 +35,7 @@ export default function ProductForm(props) {
     } else {
       setIsLoading(true);
       ApiManager.post(product, 'products')
-        .then(() => props.history.push("/products"));
+        .then(() => props.history.push("/"));
     }
   }
 

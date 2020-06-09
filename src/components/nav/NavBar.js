@@ -22,7 +22,7 @@ const NavBar = (props) => {
       </header>
       <nav>
         <ul className="container">
-          <li><Link to="/products" className="nav-link">Products</Link></li>
+          <li><Link to="/" className="nav-link">Products</Link></li>
           <li><Link to="/employees" className="nav-link">Employees</Link></li>
           <li><Link to="/locations" className="nav-link">Locations</Link></li>
           <li><Link to="/" onClick={handleLogout}>Logout</Link></li>
