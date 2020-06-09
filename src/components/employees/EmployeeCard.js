@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 
 export default function EmployeeCard(props) {
 
-  console.log("this is props yo", props)
   return (
     <>
       <div className="card">

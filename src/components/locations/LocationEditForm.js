@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function LocationForm(props) {
+export default function LocationEditForm(props) {
   return (
     <div>
 
