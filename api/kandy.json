@@ -47,6 +47,12 @@
       "name": "Chocolate Tux",
       "price": "3.89",
       "productTypeId": 1
+    },
+    {
+      "name": "Hershey's",
+      "price": 2.95,
+      "productTypeId": 1,
+      "id": 9
     }
   ],
   "productTypes": [
@@ -89,6 +95,12 @@
       "name": "Kandy Korner West Side",
       "address": "304 Unchanged Drive, Nashville, TN",
       "phone": "154-7626"
+    },
+    {
+      "name": "Lindt 2",
+      "address": "123 Opry Path",
+      "phone": "615-888-9999",
+      "id": 4
     }
   ],
   "employees": [
