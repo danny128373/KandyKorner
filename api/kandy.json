@@ -124,6 +124,17 @@
       "password": "bryFive",
       "isSupervisor": false,
       "locationId": 3
+    },
+    {
+      "firstName": "Daniel",
+      "lastName": "Meza",
+      "address": "278 Cobblestone Place Drive",
+      "phone": "6158122601",
+      "locationId": 1,
+      "isSupervisor": false,
+      "username": "dm3f90",
+      "password": "",
+      "id": 4
     }
   ],
   "productLocations": [
