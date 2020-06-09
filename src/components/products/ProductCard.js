@@ -14,7 +14,8 @@ export default function ProductCard(props) {
           <Link to={`/products/${props.product.id}`}>
             <button>Details</button>
           </Link>
-          <button type="button">
+          <button type="button"
+            onClick={() => props.history.push(`/products/${props.product.id}/edit`)}>
             Edit
           </button>
           <button type="button" onClick={() => props.deleteProduct(props.product.id)}>Remove</button>
