@@ -29,7 +29,7 @@ export default function LocationForm(props) {
       <form>
         <fieldset>
           <div className="formgrid">
-            <label htmlFor="name">Location Name</label>
+            <label htmlFor="name">Location Name:</label>
             <input
               type="text"
               required
@@ -37,7 +37,7 @@ export default function LocationForm(props) {
               id="name"
               placeholder="Location name"
             />
-            <label className="alignRight" htmlFor="address">Address</label>
+            <label className="alignRight" htmlFor="address">Address:</label>
             <input
               type="text"
               required
@@ -45,7 +45,7 @@ export default function LocationForm(props) {
               id="address"
               placeholder="Address"
             />
-            <label className="alignRight" htmlFor="phone">Phone Number</label>
+            <label className="alignRight" htmlFor="phone">Phone Number:</label>
             <input
               type="text"
               required
