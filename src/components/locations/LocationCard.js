@@ -14,10 +14,10 @@ export default function LocationCard(props) {
           <Link to={`/locations/${props.locationn.id}`}>
             <button>Details</button>
           </Link>
-          <button type="button"
+          {/* <button type="button"
             onClick={() => props.history.push(`/locations/${props.locationn.id}/edit`)}>
             Edit
-          </button>
+          </button> */}
           <button type="button" onClick={() => props.deleteLocation(props.locationn.id)}>Remove</button>
         </div>
       </div>

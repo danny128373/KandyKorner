@@ -35,5 +35,8 @@ export default {
   },
   getProductLocation(id) {
     return fetch(`${remoteURL}/productLocations/${id}?_expand=product&_expand=location`).then(e => e.json())
+  },
+  getEmployeeLocation(id) {
+    return fetch(`${remoteURL}/employees/${id}?_expand=location`).then(e => e.json())
   }
 }

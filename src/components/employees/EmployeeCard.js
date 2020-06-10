@@ -14,10 +14,10 @@ export default function EmployeeCard(props) {
           <Link to={`/employees/${props.employee.id}`}>
             <button>Details</button>
           </Link>
-          <button type="button"
+          {/* <button type="button"
             onClick={() => props.history.push(`/employees/${props.employee.id}/edit`)}>
             Edit
-          </button>
+          </button> */}
           <button type="button" onClick={() => props.deleteEmployee(props.employee.id)}>Remove</button>
         </div>
       </div>
