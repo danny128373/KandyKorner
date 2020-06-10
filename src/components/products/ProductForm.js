@@ -44,6 +44,7 @@ export default function ProductForm(props) {
       <form>
         <fieldset>
           <div className="formgrid">
+            <label htmlFor="name">Name</label>
             <input
               type="text"
               required
@@ -51,7 +52,7 @@ export default function ProductForm(props) {
               id="name"
               placeholder="Product name"
             />
-            <label htmlFor="name">Name</label>
+            <label className="alignRight" htmlFor="price">Price</label>
             <input
               type="text"
               required
@@ -59,7 +60,6 @@ export default function ProductForm(props) {
               id="price"
               placeholder="Price"
             />
-            <label className="alignRight" htmlFor="price">Price</label>
             <label htmlFor="productTypeId">Product Type:</label>
             <select className="alignRight" id="productTypeId" onChange={handleFieldChange} required>
               <option>Please select a product type</option>

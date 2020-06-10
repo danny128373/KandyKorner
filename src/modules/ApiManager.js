@@ -29,5 +29,11 @@ export default {
       },
       body: JSON.stringify(editedProduct)
     }).then(data => data.json());
+  },
+  getAllProductLocations() {
+    return fetch(`${remoteURL}/productLocations?_expand=product&_expand=location`).then(e => e.json())
+  },
+  getProductLocation(id) {
+    return fetch(`${remoteURL}/productLocations/${id}?_expand=product&_expand=location`).then(e => e.json())
   }
 }
