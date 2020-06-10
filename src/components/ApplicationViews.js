@@ -7,6 +7,7 @@ import ProductDetails from './products/ProductDetails'
 import EmployeeList from './employees/EmployeeList'
 import EmployeeForm from './employees/EmployeeForm'
 import EmployeeEditForm from './employees/EmployeeEditForm'
+import EmployeeDetails from './employees/EmployeeDetails'
 import LocationList from './locations/LocationList'
 import LocationForm from './locations/LocationForm'
 
@@ -44,6 +45,11 @@ export default function ApplicationViews() {
         render={(props) => {
           return <EmployeeEditForm {...props} />
         }} />
+      <Route exact path="/employees/:employeeId(\d+)"
+        render={props => {
+          return <EmployeeDetails employeeId={parseInt(props.match.params.employeeId)} {...props} />
+        }
+        } />
       {/* start of location routes */}
       <Route exact path="/locations" render={(props) => {
         return <LocationList {...props} />
