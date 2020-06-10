@@ -3,54 +3,54 @@
     {
       "id": 1,
       "name": "Pink Gummy Bears",
-      "price": "3.99",
+      "price": 3.99,
       "productTypeId": 1
     },
     {
       "id": 2,
       "name": "Houchen's Favorite Licorice",
-      "price": "60.95",
+      "price": 60.95,
       "productTypeId": 4
     },
     {
       "id": 3,
       "name": "Ghost Pepper Chocolate Bar",
-      "price": "4.07",
+      "price": 4.07,
       "productTypeId": 1
     },
     {
       "id": 4,
       "name": "World's Softest Jawbreaker",
-      "price": "20.99",
+      "price": 20.99,
       "productTypeId": 3
     },
     {
       "id": 5,
       "name": "World's Shortest Lasting Gum",
-      "price": "99.99",
+      "price": 99.99,
       "productTypeId": 5
     },
     {
       "id": 6,
       "name": "Jolly Developer",
-      "price": "65,000.00",
+      "price": 65000.00,
       "productTypeId": 3
     },
     {
       "id": 7,
       "name": "Candy Broccoli",
-      "price": "2.99",
+      "price": 2.99,
       "productTypeId": 3
     },
     {
       "id": 8,
       "name": "Chocolate Tux",
-      "price": "3.89",
-      "productTypeId": 1
+      "price": 3.89,
+      "productTypeId": 2
     },
     {
       "name": "Hershey's",
-      "price": 2.95,
+      "price": 2.94,
       "productTypeId": 1,
       "id": 9
     }
@@ -97,9 +97,9 @@
       "phone": "154-7626"
     },
     {
-      "name": "Lindt 2",
-      "address": "123 Opry Path",
-      "phone": "615-888-9999",
+      "name": "Lindt 3",
+      "address": "999 Opry Rd",
+      "phone": "615-111-1111",
       "id": 4
     }
   ],
@@ -136,17 +136,6 @@
       "password": "bryFive",
       "isSupervisor": false,
       "locationId": 3
-    },
-    {
-      "firstName": "Daniel",
-      "lastName": "Meza",
-      "address": "278 Cobblestone Place Drive",
-      "phone": "6158122601",
-      "locationId": 1,
-      "isSupervisor": false,
-      "username": "dm3f90",
-      "password": "",
-      "id": 4
     }
   ],
   "productLocations": [

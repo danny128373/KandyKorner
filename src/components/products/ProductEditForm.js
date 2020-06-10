@@ -3,38 +3,25 @@ import ApiManager from "../../modules/ApiManager"
 
 export default function ProductEditForm(props) {
 
-  const [product, setProduct] = useState({ name: "", price: "", productTypeId: "" })
+  const [product, setProduct] = useState({ name: "", price: "", productTypeId: 0 })
   const [isLoading, setIsLoading] = useState(false);
   const [productTypes, setProductTypes] = useState([])
-
-  // const handleFieldChange = event => {
-  //   const stateToChange = { ...product }
-  //   stateToChange[event.target.id] = event.target.value
-  //   setProduct(stateToChange)
-  // }
 
   const handleFieldChange = event => {
     const stateToChange = { ...product }
     stateToChange[event.target.id] = event.target.value
-    console.log("edit productType", stateToChange[event.target.id])
-    if (parseFloat(stateToChange[event.target.id]) < parseFloat(stateToChange[event.target.id]) + 1) {
-      stateToChange[event.target.id] = parseFloat(stateToChange[event.target.id]);
-    } else {
-      // stateToChange[event.target.id] = event.target.value;
-    }
-    setProduct(stateToChange);
+    setProduct(stateToChange)
   }
 
   const updateExistingProduct = (event) => {
     event.preventDefault()
     setIsLoading(true)
 
-    // This is an edit, so we need the id
     const editedProduct = {
       id: props.match.params.productId,
       name: product.name,
-      price: product.price,
-      productTypeId: product.productTypeId
+      price: parseFloat(product.price),
+      productTypeId: parseInt(product.productTypeId)
     }
 
     ApiManager.update(editedProduct, 'products')
@@ -85,9 +72,9 @@ export default function ProductEditForm(props) {
             />
             {/* start of select options */}
             <label htmlFor="productTypeId">Type</label>
-            <select className="form-control" id="productTypeId" onChange={handleFieldChange} required>
+            <select className="form-control" id="productTypeId" value={product.productTypeId} onChange={handleFieldChange} required>
               <option>Please select a product type</option>
-              {productTypes.map(productType => <option key={productType.id} id={productType.id}>{productType.name}</option>)}
+              {productTypes.map(productType => <option key={productType.id} id={productType.id} value={productType.id}>{productType.name}</option>)}
             </select>
             {/* end of select options */}
           </div>

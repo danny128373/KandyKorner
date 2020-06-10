@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './Login.css'
 
 export default function Login(props) {
 
@@ -12,11 +13,14 @@ export default function Login(props) {
 
   return (
     <>
-      <h1 className="site-title">
-        Kandy Korner
+      <header>
+        <h1 className="site-title">
+          Kandy Korner
         <br />
-        <small>For all your kandy inventory needs.</small>
-      </h1>
+          <small>For all your kandy inventory needs.</small>
+        </h1>
+      </header>
+
       <form onSubmit={(event) => {
         event.preventDefault()
         props.setUser(credentials)

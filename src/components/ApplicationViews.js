@@ -3,12 +3,12 @@ import { Route } from 'react-router-dom'
 import ProductList from './products/ProductList'
 import ProductForm from './products/ProductForm'
 import ProductEditForm from './products/ProductEditForm'
+import ProductDetails from './products/ProductDetails'
 import EmployeeList from './employees/EmployeeList'
 import EmployeeForm from './employees/EmployeeForm'
 import EmployeeEditForm from './employees/EmployeeEditForm'
 import LocationList from './locations/LocationList'
 import LocationForm from './locations/LocationForm'
-import LocationEditForm from './locations/LocationEditForm'
 
 export default function ApplicationViews() {
   return (
@@ -26,6 +26,11 @@ export default function ApplicationViews() {
         render={(props) => {
           return <ProductEditForm {...props} />
         }} />
+      <Route exact path="/products/:productId(\d+)"
+        render={props => {
+          return <ProductDetails productId={parseInt(props.match.params.productId)} {...props} />
+        }
+        } />
       <Route exact path="/employees" render={(props) => {
         return <EmployeeList {...props} />
       }} />
@@ -47,11 +52,6 @@ export default function ApplicationViews() {
         path="/locations/new"
         render={(props) => {
           return <LocationForm {...props} />
-        }} />
-      <Route
-        path="/locations/:locationId(\d+)/edit"
-        render={(props) => {
-          return <LocationEditForm {...props} />
         }} />
     </>
   )
